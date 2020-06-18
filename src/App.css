@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+header{
+  position: relative;
+  overflow: hidden;
+  padding: 30px 30px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,15 +19,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-header .card{
+  float: left;
+  margin-right: 25px;
 }
 
 .App-link {
@@ -35,4 +35,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/*  List Item group */
+.list-group{
+  width: 300px;
+  float: left;
+}
+
+.list-group-item{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.closeBtn{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  background-color: red;
+  color: #ffffff;
+  position: absolute;
+  right: -30px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.form-check-input{
+  position: relative;
+  top: 2px;
+  width: 30px;
+  height: 15px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.active{
+  text-decoration: underline !important;
 }

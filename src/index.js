@@ -1,13 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter } from "react-router-dom";
+
+// REDUX
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./Redux/Store/Reducer";
+
+const store = createStore(rootReducer);
+
+// Create Store
+// Connect React App with Redux
+// Insert Reducers
+// Connect Component with Redux
+// Dispatch Actions
+// Create Actions 
+// Subscribe State and Props
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
